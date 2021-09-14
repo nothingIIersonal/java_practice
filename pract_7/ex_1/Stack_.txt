@@ -1,0 +1,31 @@
+import java.util.ArrayList;
+
+public class Stack {
+
+	private ArrayList<Integer> stack;
+
+	Stack() { stack = new ArrayList<Integer>(); }
+	
+	private Integer getSize() {
+		return stack.size();
+	}
+
+	public boolean isEmpty() {
+		if ( getSize() != 0 ) { return false; }
+
+		return true;
+	}
+
+	public void push(Integer element) {
+		stack.add(element);
+	}
+
+	public Integer pop() {
+		if ( isEmpty() ) { return -1; }
+
+		Integer ret = stack.get(getSize() - 1);
+		stack.remove(getSize() - 1);
+		
+		return ret;
+	}
+}
