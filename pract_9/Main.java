@@ -48,7 +48,7 @@ public class Main {
 	}
 
 
-	// METHOD FROM OFFICIAL DOCUMENTATION
+	// METHODS FROM OFFICIAL DOCUMENTATION
 
 		// reverse planets list - returns reversed planets list
 		private static void reversePlanets(List<String> planets) {
@@ -56,7 +56,7 @@ public class Main {
 		}
 
 		// this method sorts the planets alphabetically
-		private static void sortPlanets(List<String> planets) {
+			private static void sortPlanets(List<String> planets) {
 			Collections.sort(planets);
 		}
 
@@ -64,36 +64,37 @@ public class Main {
 		private static void fillPlanets(List<String> planets, String fillPlanet) {
 			Collections.fill(planets, fillPlanet);
 		}
+
 	//
 
 
 	// CUSTOM METHOD FOR PRINT PLANETS
-	
+
 	private static void printPlanets(List<String> solarSystemV1, List<String> solarSystemV2) {
 		System.out.println();		
 		System.out.println("1-st solar system: " + solarSystemV1);
 		System.out.println("2-nd solar system: " + solarSystemV2);
 		System.out.println();
 	}
-	
+
 	//
 
 
-    public static void main(java.lang.String[] args) {
-        String mercury = new String("Меркурий");
-        String venus = new String("Венера");
-        String earth = new String("Земля");
-        String mars = new String("Марс");
-        String jupiter = new String("Юпитер");
+	public static void main(java.lang.String[] args) {
+		String mercury = new String("Меркурий");
+		String venus = new String("Венера");
+		String earth = new String("Земля");
+		String mars = new String("Марс");
+		String jupiter = new String("Юпитер");
 
-        String saturn = new String("Сатурн");
-        String uranus = new String("Уран");
-        String neptune = new String("Нептун");
-        String pluto = new String("Плутон");
+		String saturn = new String("Сатурн");
+		String uranus = new String("Уран");
+		String neptune = new String("Нептун");
+		String pluto = new String("Плутон");
 
-        ArrayList<String> solarSystemV1 = new ArrayList<>(Arrays.asList(mercury, venus, earth, mars, jupiter));
+		ArrayList<String> solarSystemV1 = new ArrayList<>(Arrays.asList(mercury, venus, earth, mars, jupiter));
 		List<String> solarSystemV2 = Collections.unmodifiableList(new ArrayList<>(Arrays.asList(saturn, uranus, neptune, pluto)));
-        
+
 		printPlanets(solarSystemV1, solarSystemV2);
 
 		removePlanet(solarSystemV1, earth); // remove all earth from 1-st solar system list
@@ -140,11 +141,11 @@ public class Main {
 		printPlanets(solarSystemV1, solarSystemV2);
 
 		sortPlanets(solarSystemV1); // sorting 1-st solar system list alphabetically
-		
+
 		printPlanets(solarSystemV1, solarSystemV2);
 
 		fillPlanets(solarSystemV1, pluto); // replace all elements of 1-st solar system on "Плутон"
-		
+
 		printPlanets(solarSystemV1, solarSystemV2);
-    }
+	}
 }
