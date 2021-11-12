@@ -35,7 +35,7 @@ public class SynchClass {
         System.out.printf("Enter horse count: ");
         count = scan.nextInt(); 
 
-        Semaphore sem = new Semaphore(1, true);
+        Semaphore sem = new Semaphore(1); // можно добавить true, чтобы лошади распределялись сами
 
         Horse[] horses = new Horse[count];
         
